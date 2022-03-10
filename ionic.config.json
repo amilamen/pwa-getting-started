@@ -1,0 +1,7 @@
+{
+  "name": "pwa-getting-started",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
