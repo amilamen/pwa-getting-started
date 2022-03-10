@@ -1,17 +1,24 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title> Tab 1 </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size-md="12" size-lg="6" *ngFor="let user of results">
+        <ion-card mode="ios">
+          <img [src]="user.picture.large" />
+          <ion-card-header>
+            <ion-card-subtitle>{{ user.gender }}</ion-card-subtitle>
+            <ion-card-title
+              >{{ user.name.first }} {{ user.name.last }}</ion-card-title
+            >
+          </ion-card-header>
+          <ion-card-content> 011-962-7516 </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
